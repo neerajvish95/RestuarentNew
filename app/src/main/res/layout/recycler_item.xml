@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:background="@color/colorBackground"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:weightSum="2"
+    android:padding="12dp">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/itemName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:drawablePadding="4dp"
+            android:drawableStart="@drawable/ic_vegetarian"
+            android:text="Veg Corner Soup"/>
+        <TextView
+            android:id="@+id/itemPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:textColor="@android:color/black"
+            android:text="$10"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutButtonAdd"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:gravity="end"
+        android:layout_weight="1">
+
+        <soup.neumorphism.NeumorphButton
+            android:id="@+id/buttonAdd"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:textColor="@color/colorPrimary"
+            android:text="ADD"
+            app:neumorph_shapeAppearance="@style/CustomButtonShapeAppearance"
+            app:neumorph_shapeType="flat"
+            android:background="@android:color/white"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutSelectedItem"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:visibility="invisible"
+        android:gravity="end"
+        android:layout_weight="1">
+
+        <soup.neumorphism.NeumorphCardView
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:textColor="@color/colorPrimary"
+            app:neumorph_shapeAppearance="@style/CustomButtonShapeAppearance"
+            app:neumorph_shapeType="flat"
+            android:background="@android:color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="3"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/buttonDecrement"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="18sp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="?selectableItemBackground"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"
+                    android:text="-"/>
+                <TextView
+                    android:id="@+id/textItemCount"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="18sp"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"
+                    android:text="0"/>
+                <TextView
+                    android:id="@+id/buttonIncrement"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="18sp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="?selectableItemBackground"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"
+                    android:text="+"/>
+            </LinearLayout>
+
+        </soup.neumorphism.NeumorphCardView>
+
+    </LinearLayout>
+
+</LinearLayout>
